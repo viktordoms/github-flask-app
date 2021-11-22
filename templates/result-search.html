@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Результат пошуку
+{% endblock %}
+
+{% block menu %}
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal">Результат пошуку</h1>
+    <form  method="post">
+    <div class="alert alert-into">
+    {% for el in search_dict %}
+        <h2>{{ el.first_name }} {{ el.last_name}}</h2>
+        <p> email:{{el.email}}</p>
+        <p> Телефон:{{el.phone_number}}</p>
+        <p> Дата народження:{{el.hire_date}}</p>
+        <p> Ранг:{{el.job.job_title}}</p>
+        <p> Зарплата:${{el.salary}}</p>
+        <p> Надбавка:{{el.commission_pct}}</p>
+        <p> Департамент:{{el.department.department_name}}</p>
+        <p> Менеджер:{{el.manager.first_name}} {{el.manager.last_name}}</p>
+    </div>
+    </form>
+    {% endfor %}
+</div>
+{% endblock %}

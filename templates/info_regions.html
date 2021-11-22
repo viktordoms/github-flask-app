@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Регіон
+{% endblock %}
+
+{% block menu %}
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal">Список регіонів</h1>
+    {% for el in regions %}
+    <div class="alert alert-into">
+        <h2>{{ el.region_name }}</h2>
+        <a href= "/regions/{{ el.region_id }}/delete" class="btn btn-danger"> Видалити</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

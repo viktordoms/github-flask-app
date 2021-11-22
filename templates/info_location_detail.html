@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ location.city }} {{ location.street_address }}
+{% endblock %}
+
+{% block menu %}
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal">{{ location.city }} {{ location.street_address }}</h1>
+
+    <div class="alert alert-into">
+        <p> Поштовий код:{{location.postal_code}}</p>
+        <p> Область:{{location.state_province}}</p>
+        <p> ID Локації:{{location.location_id}}</p>
+        <p> Країна :{{location.country.country_name}}</p>
+        <a href= "/locations/{{ location.location_id }}/delete" class="btn btn-danger"> Видалити</a>
+        <a href= "/locations/{{ location.location_id }}/update" class="btn btn-success"> Редагувати</a>
+    </div>
+</div>
+{% endblock %}

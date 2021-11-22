@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Локації
+{% endblock %}
+
+{% block menu %}
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal">Список локацій</h1>
+    {% for el in locations %}
+    <div class="alert alert-into">
+        <h2>Місто:{{ el.city }} Вулиця:{{ el.street_address }}</h2>
+        <a href= "/locations/{{ el.location_id }}" class="btn btn-warning"> Детальніше</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

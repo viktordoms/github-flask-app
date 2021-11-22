@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Ранги
+{% endblock %}
+
+{% block menu %}
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal">Список всіх рангів</h1>
+    {% for el in job %}
+    <div class="alert alert-into">
+        <h2>{{ el.job_title }}</h2>
+        <p><b>Мінімальна зарплата:${{el.min_salary}}</b></p>
+        <p><b>Максимальна зарплата:${{el.max_salary}}</b></p>
+        <a href= "/jobs/{{ el.job_id }}/delete" class="btn btn-danger"> Видалити</a>
+        <a href= "/jobs/{{ el.job_id }}/update" class="btn btn-success"> Редагувати</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

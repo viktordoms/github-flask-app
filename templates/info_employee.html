@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Працівники
+{% endblock %}
+
+{% block menu %}
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal">Список всіх працівників</h1>
+    {% for el in employee %}
+    <div class="alert alert-into">
+        <h2>{{ el.first_name }} {{ el.last_name}}</h2>
+        <p>{{el.email}}</p>
+        <p><b>Зарплата:${{el.salary}}</b></p>
+        <a href= "/employees/{{ el.employee_id }}" class="btn btn-warning"> Детальніше</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

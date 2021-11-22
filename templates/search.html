@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Пошук
+{% endblock %}
+
+{% block menu %}
+<form method="get" action= '/search/result'>
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal">Пошук</h1>
+    <div class="col-sm-6">
+        <label for="first_name" class="form-label"><font style="vertical-align: inherit;"><font>Ім'я</font></font></label>
+        <input type="text" name="first_name" id="first_name" >
+    </div>
+    <div class="col-sm-6">
+        <label for="last_name" class="form-label"><font style="vertical-align: inherit;"><font>Прізвище</font></font></label>
+        <input type="text" name="last_name" id="last_name"  >
+    </div>
+    <div class="col-sm-6">
+        <label for="email" class="form-label"><font style="vertical-align: inherit;"><font>Еmail</font></font></label>
+        <input type="text" name="email" id="email">
+    </div>
+    <div class="col-sm-6">
+        <label for="phone_number" class="form-label"><font style="vertical-align: inherit;"><font>Телефон</font></font></label>
+        <input type="text" name="phone_number" id="phone_number">
+    </div>
+    <div class="col-sm-6">
+        <label for="hire_date" class="form-label"><font style="vertical-align: inherit;"><font>Дата народження</font></font></label>
+        <input type="text" name="hire_date" id="hire_date" >
+    </div>
+    <div class="col-sm-6">
+        <label for="salary" class="form-label"><font style="vertical-align: inherit;"><font>Зарплата</font></font></label>
+        <input type="text" name="salary" id="salary" >
+    </div>
+    <div class="col-sm-6">
+        <label for="commission_pct" class="form-label"><font style="vertical-align: inherit;"><font>Надбавка</font></font></label>
+        <input type="text" name="commission_pct" id="commission_pct" >
+    </div>
+    <div class="col-sm-6">
+        <label for="job_id" class="form-label"><font style="vertical-align: inherit;"><font>Ранг</font></font></label>
+        <input type="text" name="job_id" id="job_id" >
+    </div>
+    <div class="col-sm-6">
+        <label for="department_id" class="form-label"><font style="vertical-align: inherit;"><font>Департамент</font></font></label>
+        <input type="text" name="department_id" id="department_id" >
+    </div>
+    <div class="col-sm-6">
+        <label for="manager_id" class="form-label"><font style="vertical-align: inherit;"><font>Менеджер</font></font></label>
+        <input type="text" name="manager_id" id="manager_id" >
+    </div>
+    <button type="submit" class="btn btn-danger">Пошук</button>
+</div>
+</form>
+{% endblock %}

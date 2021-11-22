@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Create employee
+{% endblock %}
+
+{% block menu %}
+<div class="py-5 text-center">
+      <h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Створення новго працівника</font></font></h2>
+      <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Нижче наведено приклад форми, які потрібно заповнити. </font><font style="vertical-align: inherit;">Заповніть усі дані та натисніть Добавити.</font></font></p>
+    </div>
+<div class="col-md-7 col-lg-8">
+        <h4 class="mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">НОВИЙ ПРАЦІВНИК</font></font></h4>
+        <form method = 'post'>
+          <div class="row g-3">
+
+            <div class="col-sm-6">
+              <label for="employee_id" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Працівника ID </font></font></label>
+              <input type="text" class="form-control" name="employee_id" id="employee_id" placeholder="ID працівника" value="" required="">
+              <div class="invalid-feedback">
+                Valid employee_id  is required.
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <label for="first_name" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ім'я</font></font></label>
+              <input type="text" class="form-control" name="first_name" id="first_name" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="last_name" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Прізвище</font></font></label>
+              <input type="text" class="form-control" name="last_name" id="last_name" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="phone_number" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Номер телефону</font></font></label>
+              <div class="input-group has-validation">
+                <span class="input-group-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">@</font></font></span>
+                <input type="text" class="form-control"  name="phone_number" id="phone_number" placeholder="Номер телефону" required="">
+              <div class="invalid-feedback">
+                  Your username is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Електронна пошта </font></font><span class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(необов’язково)</font></font></span></label>
+              <input type="email" class="form-control" name="email" id="email" placeholder="you@example.com">
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="hire_date" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Дата народження</font></font></label>
+              <input type="text" class="form-control" name="hire_date" id="hire_date" placeholder="1998-05-14" required="">
+              <div class="invalid-feedback">
+                Please enter your shipping address.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="job_id" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JOB-ID </font></font><span class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(необов’язково)</font></font></span></label>
+              <input type="text" class="form-control" name="job_id" id="job_id" placeholder="Ранг працівника">
+            </div>
+
+            <div class="col-12">
+              <label for="salary" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Зарплата </font></font><span class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(необов’язково)</font></font></span></label>
+              <input type="text" class="form-control" name="salary" id="salary" placeholder="">
+            </div>
+
+            <div class="col-12">
+              <label for="commission_pct" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Надбавка до зарплати </font></font><span class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(необов’язково)</font></font></span></label>
+              <input type="text" class="form-control" name="commission_pct" id="commission_pct" placeholder="">
+            </div>
+
+            <div class="col-12">
+              <label for="department_id" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ID Заводу </font></font><span class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(необов’язково)</font></font></span></label>
+              <input type="text" class="form-control" name="department_id" id="department_id" placeholder="">
+            </div>
+
+            <div class="col-12">
+              <label for="manager_id" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ID Керівника </font></font><span class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(необов’язково)</font></font></span></label>
+              <input type="text" class="form-control" name="manager_id" id="manager_id" placeholder="">
+            </div>
+            <input type='submit' class="btn btn-success" value="Добавити">
+          </div>
+        </form>
+</div>
+{% endblock %}

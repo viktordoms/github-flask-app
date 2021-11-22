@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Create jobs
+{% endblock %}
+
+{% block menu %}
+<div class="py-5 text-center">
+      <h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Створення нового рангу роботи</font></font></h2>
+      <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Нижче наведено приклад форми, які потрібно заповнити. </font><font style="vertical-align: inherit;">Заповніть усі дані та натисніть Добавити.</font></font></p>
+    </div>
+<div class="col-md-7 col-lg-8">
+        <h4 class="mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Новий ранг</font></font></h4>
+        <form method = 'post'>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="job_id" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ID рангу</font></font></label>
+              <input type="text" class="form-control" name="job_id" id="job_id" placeholder="ID Рангу" value="" required="">
+              <div class="invalid-feedback">
+                Please enter job id.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="job_title" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Назва рангу</font></font></label>
+              <input type="text" class="form-control" name="job_title" id="job_title" placeholder="Назва рангу" value="" required="">
+              <div class="invalid-feedback">
+                Please enter job_title.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="min_salary" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Мінімальна зарплата</font></font></label>
+              <input type="text" class="form-control" name="min_salary" id="min_salary" placeholder="Мінімальна зарплата" value="" required="">
+              <div class="invalid-feedback">
+                Please enter min_salary.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="max_salary" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Максимальна зарплата</font></font></label>
+              <input type="text" class="form-control" name="max_salary" id="max_salary" placeholder="Максимальна зарплата" value="" required="">
+              <div class="invalid-feedback">
+                Please enter max_salary.
+              </div>
+            </div>
+
+            <input type='submit' class="btn btn-success" value="Добавити">
+          </div>
+        </form>
+</div>
+{% endblock %}

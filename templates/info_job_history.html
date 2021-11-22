@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Історія роботи
+{% endblock %}
+
+{% block menu %}
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal">Створення історії роботи</h1>
+    {% for el in job_history %}
+    <div class="alert alert-into">
+        <h2> ID запису:{{ el.id }}</h2>
+        <h2>Працівник:{{ el.employee.first_name }} {{ el.employee.last_name }} Департамент:{{ el.department.department_name }}</h2>
+        <p><b>Початок роботи:{{el.start_date}}</b></p>
+        <p><b>Дата Звільненя:{{el.end_date}}</b></p>
+        <a href= "/job-history/{{ el.id }}/delete" class="btn btn-danger"> Видалити</a>
+        <a href= "/job-history/{{ el.id }}/update" class="btn btn-success"> Редагувати</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

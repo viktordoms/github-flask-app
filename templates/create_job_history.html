@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Create job_history
+{% endblock %}
+
+{% block menu %}
+<div class="py-5 text-center">
+      <h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Створення нової історії працівника</font></font></h2>
+      <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Нижче наведено приклад форми, які потрібно заповнити. </font><font style="vertical-align: inherit;">Заповніть усі дані та натисніть Добавити.</font></font></p>
+    </div>
+<div class="col-md-7 col-lg-8">
+        <h4 class="mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Нова історія</font></font></h4>
+        <form method = 'post'>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="job_id" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ID рангу</font></font></label>
+              <input type="text" class="form-control" name="job_id" id="job_id" placeholder="ID Рангу" value="" required="">
+              <div class="invalid-feedback">
+                Please enter job id.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="employee_id" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Працівника ID"</font></font></label>
+              <input type="text" class="form-control" name="employee_id" id="employee_id" placeholder="Працівника ID" value="" required="">
+              <div class="invalid-feedback">
+                Please enter job_title.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="start_date" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Початок роботи</font></font></label>
+              <input type="text" class="form-control" name="start_date" id="start_date" placeholder="1998-05-14" value="" required="">
+              <div class="invalid-feedback">
+                Please enter min_salary.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="end_date" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Дата звільненя</font></font></label>
+              <input type="text" class="form-control" name="end_date" id="end_date" placeholder="1998-12-02">
+              <div class="invalid-feedback">
+                Please enter end_date.
+              </div>
+            </div>
+
+             <div class="col-sm-6">
+              <label for="department_id" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ID Департаменту</font></font></label>
+              <input type="text" class="form-control" name="department_id" id="department_id" placeholder="ID Департаменту" value="" required="">
+              <div class="invalid-feedback">
+                Please enter department id.
+              </div>
+            </div>
+
+            <input type='submit' class="btn btn-success" value="Добавити">
+          </div>
+        </form>
+</div>
+{% endblock %}

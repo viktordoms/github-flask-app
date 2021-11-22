@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Департаменти
+{% endblock %}
+
+{% block menu %}
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal">Список всіх департаментів</h1>
+    {% for el in department %}
+    <div class="alert alert-into">
+        <h2>{{ el.department_name }}</h2>
+        <p>Директор:{{el.manager.first_name}} {{el.manager.last_name}}</p>
+        <p>Розташування:{{el.location.city}}</p>
+        <a href= "/departments/{{ el.department_id }}/delete" class="btn btn-danger"> Видалити</a>
+        <a href= "/departments/{{ el.department_id }}/update" class="btn btn-success"> Редагувати</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
